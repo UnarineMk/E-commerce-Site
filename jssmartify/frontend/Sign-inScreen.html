@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-fluid cat-container pb-5">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="#">Smartify</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link current" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link " href="#">Category</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="/#/cart">Cart</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0 me-3">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                </form>
+                <form class="form-inline my-2 my-lg-0">
+                    <button class="btn_search" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <section class="signIn" id="contact">
+        <div class="alignment">
+            <h5 class="section-title">Sign-in</h5>
+            <div class="signIncontainer bd-grid">
+                <form class="signIn-form">
+                    <input type="email" class="signIn-input" placeholder="email" name="email" id="email" />
+                    <input type="text" class="signIn-input" placeholder="Name" name="name" />
+                    <input type="submit" value="Sign-In" class="signIn-button button" />
+                    <p class="new-user"> New User? <a href="#/register" class="new-accountlink">Create your account</a>
+                    </p>
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+<script src="./js/bootstrap.js"></script>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section class="PlaceorderScreen-section">
+        <h1>Order ${_id}</h>
+            <div class="row main-order-row">
+
+                <div class="row Order-shipping-row">
+                    <div class="col-md-7 col-img order-shipping-details">
+                        <h2 class="order-headings"><b>Shipping</b></h2>
+                        <div class="order-text">
+                            ${shipping.address},${shipping.city},${
+                            shipping.postalCode
+                            },${shipping.country}
+                            <p class="product-description-price">Shipping cost R 100 each device</p>
+                            <p class="product-description-price">${
+                                isDelivered
+                                ? `
+                            <p> Delivered at ${deliveredAt}</p>`
+                            : `<p> Not Delivered</p>`
+                            }</p>
+                        </div>
+                        <div class=" cart-margine-order ">
+                        </div>
+
+                    </div>
+
+                    <div class="col col-md-5 order-placement">
+
+                        <table>
+                            <tr>
+                                <th>
+                                    <h4 class="order-summary"><b>Order Summary</b></h4>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="summary-prices">Price of Items</p>
+                                </td>
+                                <td>
+                                    <p class="summary-prices table-padding">R${itemsPrice}</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="summary-prices">Shipping price</p>
+                                </td>
+                                <td>
+                                    <p class="summary-prices table-padding">R${shippingPrice}</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="summary-prices">Tax</p>
+                                </td>
+                                <td>
+                                    <p class="summary-prices table-padding">R${taxPrice}</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="summary-prices total-price"><b>Order total</b></p>
+                                </td>
+                                <td>
+                                    <p class="summary-prices table-padding total-price"><b>R${totalPrice}</b></p>
+                                </td>
+                            </tr>
+
+                        </table>
+                        <div id="paypal-button"> </div>
+
+
+
+
+                    </div>
+                </div>
+
+
+                <div class="row Order-shipping-row">
+                    <div class="col-md-7 col-img order-payment-details">
+                        <h2 class="order-headings"><b>Payments</b></h2>
+                        <div class="order-text">
+                            Payment Method:${payment.paymentMethod}
+                            ${
+                            isPaid
+                            ? `<p> Paid at ${PaidAt}</p>`
+                            : `<p> Not Paid</p>`
+                            }
+                        </div>
+
+
+                        <div class=" cart-margine-order ">
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-5 col-img order-payment-details">
+
+
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+    </section>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

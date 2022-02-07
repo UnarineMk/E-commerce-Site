@@ -1,0 +1,88 @@
+profile screen 
+map issue
+
+<div class = "col col-md-7">
+    <table>
+    <thead>
+    <tr>
+        <th>
+            <h4 class=""><b>Order ID</b></h4>
+        </th>
+        <th>
+            <h4 class=""><b>Date</b></h4>
+        </th>
+        <th>
+            <h4 class=""><b>Total</b></h4>
+        </th>
+        <th>
+            <h4 class=""><b>Paid</b></h4>
+        </th>
+        <th>
+            <h4 class=""><b>Delivered</b></h4>
+        </th>
+        <th>
+            <h4 class=""><b>Action</b></h4>
+        </th>
+    </tr>
+    </thead>
+
+<tbody> ${
+      orders.length === 0
+        ? `<tr><td colspan ="6"> No Order Found.</tr>`
+        : orders
+            .map(
+              (order) => `
+<tr>
+<td>${order._id}</td>
+<td>${order.createdAt}</td>
+<td>${order.paidAt || 'No'}</td>
+<td>${order.deliveryAt || 'No'}</td>
+<td><a href="/#/order/${order._id}"> Details</td>
+</tr>
+`
+            )
+            .join('\n')
+    }
+
+    <tr>
+        <td>
+            <p class="summary-prices">Price of Items</p>
+        </td>
+        <td>
+            <p class="summary-prices table-padding"></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p class="summary-prices">Shipping price</p>
+        </td>
+        <td>
+            <p class="summary-prices table-padding"></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p class="summary-prices">Tax</p>
+        </td>
+        <td>
+            <p class="summary-prices table-padding"></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p class="summary-prices total-price"><b>Order total</b></p>
+        </td>
+        <td>
+            <p class="summary-prices table-padding total-price"><b></b></p>
+        </td>
+        <td>
+        <div id="paypal-button"> </div>
+        </td>
+    </tr>
+
+</table>
+    </div>
+
+
+
+orderScreen map issue
